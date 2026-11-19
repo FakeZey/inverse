@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inverse Matrix Calculator</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section id="banner">
+    <p>Inverse Matrix Calculator<hr></p>
+    <div id="upper">
+        <div id="matrix1" class="parent">
+
+            <label for="size">Matrix Size:</label>
+            <select id="size" onchange="generateMatrix()">
+                <option value="2">2 x 2</option>
+                <option value="3" selected>3 x 3</option>
+                <option value="4">4 x 4</option>
+                <option value="5">5 x 5</option> 
+                <option value="6">6 x 6</option> 
+                <option value="7">7 x 7</option> 
+                <option value="8">8 x 8</option> 
+            </select>
+
+            <div id="matrixGrid"></div>
+
+            <div class="functions">
+                <button type="button" class="function" onclick="mc.inverse()">Inverse</button>
+                <button type="button" class="function" onclick="mc.clear()">Clear</button>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <div id="lower">
+        <textarea wrap="off" id="console" cols="60" rows="20" readonly style="font-family: monospace;">Result:</textarea>
+    </div>
+
+</section>
+</body>
+</html>
